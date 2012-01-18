@@ -1,0 +1,107 @@
+/* 
+    Document   : style
+    Created on : Jan 18, 2012, 5:57:23 PM
+    Author     : Khalil
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+/* common ------------------------------------*/
+body{
+    margin: 0;
+    padding: 0;
+}
+.f{
+    float: left !important;
+}
+.f-r{
+    float: right !important;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+.ta-l{
+    text-align: left;
+}
+.container{
+    width:354px;
+    background: #333;
+    min-height: 200px;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    direction: rtl;
+}
+.logo{
+    background: #d33912;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 5px #000;
+    -moz-box-shadow: inset 0px 0px 5px  #000;
+    box-shadow: inset 0px 0px 5px  #000;
+}
+.header{
+    background: #e3e3e3;
+    border-bottom: 1px solid #FFF;
+    padding: 10px;
+}
+.ex-body{
+    padding: 10px;
+}
+.ex-body select{
+    width: 150px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 4px;
+    background: #333;
+    border: 1px solid #CCC;
+    color: #FFF;
+}
+.league{
+    margin: 5px 0 0 10px;
+
+}
+.list{
+    background: #272727;
+    float: none;
+    margin: 1px 0;
+    clear: both;
+}
+.teamA,  .teamB {
+    width: 38%;
+    margin: 5px 2px;
+}
+.result {
+    font-size: 17px;
+    color: white;
+    display: inline-block;
+    width: 66px;
+    text-align: center;
+    direction: ltr;
+    min-height: 29px;
+}
+.teamA a,  .teamB a {
+    margin: 0 6px;
+    font: normal 12px tahoma;
+}
+a {
+font: bold 15px arial;
+color: #FFFEFE;
+line-height: 20px;
+text-decoration: none;
+}
+.teamB img {
+float: right;
+border: 0;
+vertical-align: top;
+margin-left: 0;
+border-image: initial;
+}
