@@ -1,0 +1,17 @@
+{
+    "name":"Match ٍchedule ",
+    "version": "2.0",
+    "description": "Get All Current Matchs",
+    "background_page": "views/bg.html",
+    "icons":{"48": "views/images/yallakora.png",
+        "128": "views/images/yallakora.png"},
+    "browser_action": {
+        "default_icon": "views/images/yallakora.png",
+         "default_title":"Match ٍchedule ",
+        "popup": "views/popup.html"
+  },
+    "permissions": [
+        "http://*.yallakora.com/*"
+    ]
+}
+
