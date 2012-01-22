@@ -37,7 +37,8 @@ YallakoraBGObject=function(){
                 for(j=0;j<matches.length;j++){
                     out+='<div class="teamA f-r ta-l">';
                     out+='<a href="'+yallakoraStaticData.TeamUrl+"?tourid="+data[i].ID+"&teamId="+matches[j].Team1+'" target="_blank">';
-                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team1Thumb+'" width="25" height="25" class="feature" onerror="yallakoraPopup.onErrorImageLoad(this)" />';
+                    image=data[i].TourLogo;
+                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team1Thumb+'" width="25" height="25" class="feature" srcsrc="'+image+'" onerror="yallakoraPopup.onErrorImageLoad(this)">';
                     out+=matches[j].Team1Name;
                     out+="</a></div>";
                     out+='<div class="result f-r">';
@@ -46,7 +47,7 @@ YallakoraBGObject=function(){
 
                     out+='<div class="teamB f">';
                     out+='<a href="'+yallakoraStaticData.TeamUrl+"?tourid="+data[i].ID+"&teamId="+matches[j].Team2+'" target="_blank">';
-                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team2Thumb+'" width="25" height="25" class="feature" onerror="yallakoraPopup.onErrorImageLoad(this)">';
+                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team2Thumb+'" width="25" height="25" class="feature" srcsrc="'+image+'" onerror="yallakoraPopup.onErrorImageLoad(this)">';
                     out+=matches[j].Team2Name
                     out+="</a></div>";
                     out+='<div class="clearfix"></div>';
@@ -75,9 +76,6 @@ YallakoraBGObject=function(){
                     handler(response);
                 });
             })
-        },
-        onErrorImageLoad:function(element){
-            element.attr("src","/images/logo.png");
         }
     };
     $(function(){
