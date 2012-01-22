@@ -9,15 +9,41 @@ YallakoraPopupObject=function(){
             }
             return out;
         },
+        addDates:function(){
+            var out='';
+            dates=background.yallakoraStaticData.Dates;
+            for(i=0;i<dates.length;i++){
+                out+='<option value="'+dates[i].value+'">'+dates[i].name+'</option>';
+            }
+            return out;
+        },
         setOnreadyActions:function(){
             $("#days").html(yallakoraPopup.addDays());
+            $("#dates").html(yallakoraPopup.addDates());
             $("#days").change(function(){
                 if($(this).val()){
-                    background.yallakoraBG.getData($(this).val(),function(response){
-                        $("#result").html(response);
-                    });
+                    yallakoraPopup.getData()
                 }
             });
+            $("#dates").change(function(){
+                if($("#days").val()){
+                    yallakoraPopup.getData()
+                }
+            });
+        },
+        getData:function(){
+            data={
+                'gmt': $("#dates").val(),
+                'lang':'1',
+                'tab':$("#days").val(),
+                'tourid':'0',
+                'RegionId':'1'
+            }
+            background.yallakoraBG.getData(data,function(response){
+                $("#result").html(response);
+            }); 
+        },onErrorImageLoad:function(element){
+            element.src="images/logo.png";
         }
     };
     $(function(){
