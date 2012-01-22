@@ -15,6 +15,29 @@ YallakoraStaticData=function(){
                 "value":2
             }
         ],
+        "Dates":[
+            {
+                "name":"GMT",
+                "value":0
+            },
+            {
+                "name":"Egypt",
+                "value":1
+            },
+            {
+                "name":"ksa",
+                "value":2
+            },
+            {
+                "name":"UAE",
+                "value":3
+            }
+            ,
+            {
+                "name":"Mroco",
+                "value":4
+            }
+        ],
         "TeamLogoURL":"http://www.yallakora.com/pictures/TeamLogo/thumb/",
         "TeamUrl":"http://www.yallakora.com/arabic/ykchampions/team.aspx",
         "LeagueLogo":"http://www.yallakora.com/pictures/ChampLogos/",

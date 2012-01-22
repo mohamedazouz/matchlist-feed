@@ -1,13 +1,6 @@
 YallakoraBGObject=function(){
     var yallakoraBG={
-        getMatchList:function(day,handler){
-            data={
-                'gmt': '1',
-                'lang':'1',
-                'tab':day,
-                'tourid':'0',
-                'RegionId':'1'
-            }
+        getMatchList:function(data,handler){
             yallakoraProxy.getDataFeed(data,function(response){
                 handler(response);
             });
@@ -44,25 +37,16 @@ YallakoraBGObject=function(){
                 for(j=0;j<matches.length;j++){
                     out+='<div class="teamA f-r ta-l">';
                     out+='<a href="'+yallakoraStaticData.TeamUrl+"?tourid="+data[i].ID+"&teamId="+matches[j].Team1+'" target="_blank">';
-                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team1Thumb+'" width="25" height="25" class="feature" onerror="javascript:SetNaMatcesImage(this)" />';
+                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team1Thumb+'" width="25" height="25" class="feature" onerror="yallakoraPopup.onErrorImageLoad(this)" />';
                     out+=matches[j].Team1Name;
                     out+="</a></div>";
-                    date=matches[j].Date;
-                    date=date.substr(6);
-                    date=date.substr(0,date.length-2);
-                    d=new Date(parseInt(date));
-                    now=new Date();
                     out+='<div class="result f-r">';
-                    if(now>d.valueOf()){
-                        out+=matches[j].Team2Score + " - " + matches[j].Team1Score;
-                    }else{
-                        out+=dateFormat(d, "HH-MM");
-                    }
+                    out+=matches[j].result;
                     out+='</div>';
 
                     out+='<div class="teamB f">';
                     out+='<a href="'+yallakoraStaticData.TeamUrl+"?tourid="+data[i].ID+"&teamId="+matches[j].Team2+'" target="_blank">';
-                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team2Thumb+'" width="25" height="25" class="feature" onerror="javascript:SetNaMatcesImage(this)">';
+                    out+='<img alt="" src="'+yallakoraStaticData.TeamLogoURL+matches[j].Team2Thumb+'" width="25" height="25" class="feature" onerror="yallakoraPopup.onErrorImageLoad(this)">';
                     out+=matches[j].Team2Name
                     out+="</a></div>";
                     out+='<div class="clearfix"></div>';
@@ -85,12 +69,15 @@ YallakoraBGObject=function(){
             }
             handler(out);
         },
-        getData:function(day,handler){
-            yallakoraBG.getMatchList(day, function(matchList){
+        getData:function(data,handler){
+            yallakoraBG.getMatchList(data, function(matchList){
                 yallakoraBG.prepareDataToShow(matchList,function(response){
                     handler(response);
                 });
             })
+        },
+        onErrorImageLoad:function(element){
+            element.attr("src","/images/logo.png");
         }
     };
     $(function(){
