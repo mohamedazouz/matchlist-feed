@@ -43,7 +43,7 @@ YallakoraPopupObject=function(){
                 $("#result").html(response);
             }); 
         },onErrorImageLoad:function(element){
-            element.src="images/logo.png";
+            element.src=element.getAttribute("srcsrc");
         }
     };
     $(function(){
