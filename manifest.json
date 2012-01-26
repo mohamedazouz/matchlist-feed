@@ -1,13 +1,13 @@
 {
-    "name":"Match ٍchedule ",
-    "version": "2.0",
-    "description": "Get All Current Matchs",
+    "name":"أوقات الماتشات",
+    "version": "1.0",
+    "description": "أوقات جميع الماتشات",
     "background_page": "views/bg.html",
     "icons":{"48": "views/images/yallakora.png",
         "128": "views/images/yallakora.png"},
     "browser_action": {
         "default_icon": "views/images/yallakora.png",
-         "default_title":"Match ٍchedule ",
+         "default_title":"أوقات الماتشات",
         "popup": "views/popup.html"
   },
     "permissions": [
