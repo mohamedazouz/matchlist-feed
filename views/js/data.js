@@ -3,38 +3,38 @@ YallakoraStaticData=function(){
         "MatchListURL":"http://www.yallakora.com/Services/AjaxMethods.asmx/GetMatchesListByRegion",
         "Days":[
             {
-                "name":"Yesterday",
+                "name":"الأمس",
                 "value":0
             },
             {
-                "name":"Today",
+                "name":"اليوم",
                 "value":1
             },
             {
-                "name":"Tomorrow",
+                "name":"غداً",
                 "value":2
             }
         ],
         "Dates":[
             {
-                "name":"GMT",
+                "name":"جرينيتش",
                 "value":0
             },
             {
-                "name":"Egypt",
+                "name":"مصر",
                 "value":1
             },
             {
-                "name":"ksa",
+                "name":"السعودية",
                 "value":2
             },
             {
-                "name":"UAE",
+                "name":"الأمارات",
                 "value":3
             }
             ,
             {
-                "name":"Mroco",
+                "name":"المغرب",
                 "value":4
             }
         ],
