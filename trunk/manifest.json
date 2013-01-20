@@ -2,16 +2,21 @@
     "name":"أوقات الماتشات",
     "version": "1.0",
     "description": "أوقات جميع الماتشات",
-    "background_page": "views/bg.html",
-    "icons":{"48": "views/images/yallakora.png",
-        "128": "views/images/yallakora.png"},
+    "manifest_version":2,
+    "background":{
+        "page":"views/bg.html"   
+    },
+    "icons":{
+        "48": "views/images/yallakora.png",
+        "128": "views/images/yallakora.png"
+    },
     "browser_action": {
         "default_icon": "views/images/yallakora.png",
-         "default_title":"أوقات الماتشات",
-        "popup": "views/popup.html"
-  },
+        "default_title":"أوقات الماتشات",
+        "default_popup": "views/popup.html"
+    },
     "permissions": [
-        "http://*.yallakora.com/*"
+    "http://*.yallakora.com/*"
     ]
 }
 
