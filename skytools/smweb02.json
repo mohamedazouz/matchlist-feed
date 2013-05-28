@@ -1,0 +1,14 @@
+{
+  "brand": "joyent",
+  "dataset_uuid": "cf7e2f40-9276-11e2-af9a-0bad2233fb0b",
+  "alias": "web02",
+  "hostname": "svmweb02",
+  "max_physical_memory": 1024,
+  "quota": 10,
+  "nics": [
+    {
+      "nic_tag": "admin",
+      "ip": "dhcp"
+    }
+  ]                            
+}
