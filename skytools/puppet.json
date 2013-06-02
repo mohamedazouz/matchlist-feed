@@ -1,0 +1,14 @@
+{
+ "brand": "joyent",
+ "image_uuid": "cf7e2f40-9276-11e2-af9a-0bad2233fb0b",
+ "alias": "puppet-server-1",
+ "hostname": "puppet-server",
+ "max_physical_memory": 1000,
+ "quota": 5,
+ "nics": [
+  {
+    "nic_tag": "admin",
+    "ip": "dhcp",
+  }
+ ]
+}
